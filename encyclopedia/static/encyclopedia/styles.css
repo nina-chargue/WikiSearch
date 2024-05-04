@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: #000000;
+}
+
+code {
+    white-space: pre;
+}
+
+h1 {
+    margin-top: 0px;
+    padding-top: 15px;
+    color: #73BBC9;
+}
+
+h2, .logo {
+    color: #73BBC9;
+}
+
+.logo:hover {
+    color: #4d718a;
+}
+
+textarea, input {
+    /* height: 90vh; */
+    width: 80%;
+    color: #fff;
+    background-color: #3C5B6F;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    overflow-y: hidden; 
+    height: auto; 
+}
+
+.main {
+    padding: 10px;
+}
+
+.search {
+    width: 100%;
+    font-size: 15px;
+    line-height: 15px;
+}
+
+.sidebar {
+    background-color: #222831;
+    height: 100vh;
+    padding: 30px;
+    min-width: none;
+}
+
+.sidebar h2 {
+    margin-top: 5px;
+}
+
+.search {
+    color: #fff;
+    background-color: #3C5B6F;
+    border: none;
+    border-radius: 5px;
+}
+
+.save-button, .edit-button {
+    margin-right: 135px;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: #3C5B6F;
+    color: #fff; 
+    border: none;
+    border-radius: 5px; 
+    float: right;
+}
+
+.button:hover {
+    background-color: #4d718a;
+    color: #fff; 
+}
+
+::placeholder {
+    color: #73BBC9;
+}
+
+.content, .entry {
+    color: #fff; 
+}
+
+.entry:hover {
+    color: #73BBC9;
+}
+
+.form-box, .search {
+    margin-top: 30px;
+}
+
+.list-entries {
+    margin-top: 20px;
+}

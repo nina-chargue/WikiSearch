@@ -1,0 +1,49 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+    {% load static %} 
+{% block head %}
+
+    <link href="{% static 'encyclopedia/newpage.css' %}" rel="stylesheet">
+
+{% endblock %}
+
+{% block body %}
+    <h1>Create New Page</h1>
+
+    {% for message in messages %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endfor %}
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-box">
+            <div>
+                <input type="text" id="title" name="title" placeholder="Title"><br><br>
+            </div>
+            <div>
+                <textarea id="content" name="content" rows="5" placeholder="Content"></textarea><br>
+            </div>
+
+            <button class="save-button button" type="submit">Save Page</button>
+        </div>
+        
+    </form>
+
+    <script>
+        const textarea = document.getElementById('content');
+
+        textarea.addEventListener('input', function() {
+            // Reset the height to auto to recalculate the height based on the content
+            textarea.style.height = 'auto';
+
+            // Set the height of the textarea to its scroll height
+            textarea.style.height = textarea.scrollHeight + 'px';
+        });
+    </script>
+{% endblock %}
+

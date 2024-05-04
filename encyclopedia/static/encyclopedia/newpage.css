@@ -1,0 +1,6 @@
+textarea {
+    resize: none; /* Prevent resizing */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    height: auto; /* Set initial height to auto */
+    max-height: 200px; /* Set maximum height */
+}

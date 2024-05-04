@@ -1,0 +1,41 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Edit Entry
+{% endblock %}
+{% load static %}
+{% block head %}
+    <link href="{% static 'encyclopedia/newpage.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+    <h1>Edit {{ title }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-box">
+            <div>
+                <!-- Pre-populate title input field with existing title -->
+                <input type="text" id="title" name="title" placeholder="Title" value="{{ title }}"><br><br>
+            </div>
+            <div>
+                <!-- Pre-populate content textarea with existing content -->
+                <textarea id="content" name="content" rows="5" placeholder="Content">{{ content }}</textarea><br>
+            </div>
+            <button class="save-button button" type="submit">Save Page</button>
+        </div>
+    </form>
+
+    <script>
+        const textarea = document.getElementById('content');
+
+        textarea.addEventListener('input', function() {
+            // Reset the height to auto to recalculate the height based on the content
+            textarea.style.height = 'auto';
+
+            // Set the height of the textarea to its scroll height
+            textarea.style.height = textarea.scrollHeight + 'px';
+        });
+    </script>
+{% endblock %}
+

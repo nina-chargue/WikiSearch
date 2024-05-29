@@ -1,30 +1,27 @@
-# Encyclopedia Wiki
-This project aims to create a simple wiki platform where users can create, edit, search, and browse encyclopedia entries. It leverages Python's Flask framework for the backend and HTML/CSS for the frontend.
-
-# Google-like Search Engine
-
-This project replicates essential features of Google's search engine using HTML and CSS. It offers a familiar user interface with functionalities such as regular search, image search, and advanced search.
+#  The Bazaar
+A commerce app designed for auctions, where users can create profiles to either list items for auction or bid on others' listings. The app provides a dynamic and interactive platform for users to engage in buying and selling through auctions. Below is a detailed description of the features and functionalities of The Bazaar.
 
 ## Features
 
-- Entry Page: Visiting /wiki/TITLE renders a page displaying the contents of the encyclopedia entry.
-  -The content is fetched by calling the appropriate util function.
-  - If the entry doesn't exist, an error page is shown.
-  - If the entry exists, its content is displayed, with the page title including the entry name.
-- Index Page: index.html is updated to allow users to click on entry names to navigate directly to the respective entry page.
-  - Search: Users can type a query into the search box in the sidebar.
-  - If the query matches an entry, the user is redirected to that entry’s page.
-  - If not, a search results page displays entries containing the query as a substring.
-  - Clicking an entry name on the results page takes the user to that entry’s page.
-- New Page: Clicking “Create New Page” takes the user to a page where they can create a new entry.
-  - Users enter a title and Markdown content for the page.
-  - Clicking a button saves the new page.
-  - If an entry with the provided title already exists, an error message is shown.
-- Edit Page: Users can click a link on each entry page to edit its Markdown content.
-  - The textarea is pre-populated with existing content.
-  - Clicking a button saves the changes and redirects back to the entry page.
-- Random Page: Clicking “Random Page” in the sidebar takes the user to a random entry.
-- Markdown to HTML Conversion: Markdown content in entry files is converted to HTML before being displayed to the user. This is achieved using the markdown2 package.
+- User Authentication
+  - Sign In and Register: Users can create a new account or sign in to an existing account to access the features of the app.
+- User Profiles
+  - Create and Edit Profile: Users can create and edit their profiles to personalize their experience.
+  - View Other Users' Profiles: Users can view other users' profiles and contact them.
+- Listings
+  - Create Listing: Users can create new auction listings by specifying a title, description, starting bid, and optionally, an image URL and category (e.g., Fashion, Toys, Electronics, Home, etc.).
+  - Active Listings Page: The default route of the application displays all currently active auction listings. Each listing shows the title, description, current price, and photo (if available).
+  - Listing Page: Clicking on a listing takes users to a detailed page for that listing. Here, users can view all details, including the current price, and, if signed in, perform various actions:
+    - Watchlist Management: Users can add or remove the item from their watchlist.
+    - Place Bid: Users can place a bid, provided it meets the starting bid and is higher than any existing bids.
+    - Close Auction: Users who created the listing can close the auction, making the highest bidder the winner and deactivating the listing.
+    - Comments: Users can add comments to the listing, and all comments are displayed on the listing page.
+- Watchlist
+    - Watchlist Page: Signed-in users can visit a page displaying all listings they have added to their watchlist. Clicking on a listing navigates to its detailed page.
+- Categories
+  - Categories Page: Users can visit a page that lists all categories. Clicking on a category displays all active listings within that category.
+- Closed Listings
+  - View Closed Listings: Users can view listings they have won after the auction is closed.
 
 ## Implementation
 

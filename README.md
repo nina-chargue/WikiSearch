@@ -1,5 +1,5 @@
-# Encyclopedia Wiki Search
-This project replicates the creation of a wiki page using Django
+# Encyclopedia Wiki
+This project aims to create a simple wiki platform where users can create, edit, search, and browse encyclopedia entries. It leverages Python's Django framework for the backend and HTML/CSS for the frontend.
 
 ## Features
 

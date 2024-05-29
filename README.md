@@ -36,7 +36,7 @@ This project was developed while taking the Harvard virtual class CS50's Web Pro
 1. Clone the repository: git clone https://github.com/your_username/encyclopedia-wiki.git
 2. Navigate to the project directory.
 3. Install dependencies: pip install -r requirements.txt
-4. Run the Flask application: python app.py
+4. Run the Django application: python app.py / python manage.py runserver
 5. Open your web browser and go to http://localhost:5000 to start using the Encyclopedia Wiki.
 
 ## Demonstrative Video 
